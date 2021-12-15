@@ -1,0 +1,13 @@
+server:
+  port : 8081
+spring:
+  profiles:
+    active: local
+  application:
+    name: service-A
+resilience4j.ratelimiter:
+  instances:
+    serviceA_greet:
+      limitForPeriod: 5
+      limitRefreshPeriod: 1s
+      timeoutDuration: 0

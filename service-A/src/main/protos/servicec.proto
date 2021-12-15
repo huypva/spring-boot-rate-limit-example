@@ -1,0 +1,18 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "io.codebyexample.servicea.proto.v1";
+package io.codebyexample.servicec.proto.v1;
+
+import "google/protobuf/empty.proto";
+
+service ServiceC {
+  rpc Greet(GreetRequest) returns (GreetResponse);
+}
+
+message GreetRequest {
+  int32 id = 1;
+}
+
+message GreetResponse {
+  string message = 1;
+}
