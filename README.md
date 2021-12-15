@@ -12,9 +12,6 @@ The example project for StringBoot service
 ├── service-A
 │   ├── Dockerfile
 │   ...
-├── service-B
-│   ├── Dockerfile
-│   ...
 ├── docker-compose.yaml
 |
 └── README.md
@@ -38,14 +35,6 @@ $ ../mvnw spring-boot:run
 ...
 ```
 
-- Build & start service-B
-```shell script
-$ cd service-B
-$ ../mvnw clean package
-$ ../mvnw spring-boot:run
-...
-```
-
 ### Start services in docker 
 
 ```shell script
@@ -55,7 +44,7 @@ $ docker-compose up -d
 ## Run testing
 
 ```shell script
-curl http://localhost:8081/greetb/1
+curl http://localhost:8081/greet/1
 ```
 
 ## Stop project
